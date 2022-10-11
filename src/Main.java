@@ -9,7 +9,7 @@ public class Main {
         System.out.println(addUpTo(3));
         System.out.println(nextEdge(5,7));
         System.out.println(sumOfCubes(new int[] {1, 5, 9}));
-        System.out.println(abcmath(1, 2, 3));
+        System.out.println(abcmath(5, 2, 1));
     }
 
     public static int remainder(int a ,int b){
@@ -53,6 +53,9 @@ public class Main {
         return sum;
     }
     public static boolean abcmath(int a, int b, int c){
-        return a * (b + 1) % c == 0;
+        for(int i = 1;i <= b; i++ ){
+            a+=a;
+        }
+        return a % c == 0;
     }
 }
