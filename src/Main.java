@@ -8,7 +8,7 @@ public class Main {
         System.out.println(ctoa('['));
         System.out.println(addUpTo(3));
         System.out.println(nextEdge(5,7));
-        System.out.println(sumOfCubes(new int[] {1, 5, 9}));
+        System.out.println(sumOfCubes(new int[] {2, 2, 2}));
         System.out.println(abcmath(5, 2, 1));
     }
 
@@ -45,17 +45,15 @@ public class Main {
     public static int nextEdge(int a, int b){
         return a + b - 1;
     }
-    public static int sumOfCubes(int[] args){
+    public static int sumOfCubes(int[] a){
         int sum = 0;
-        for (int i = 0; i< args.length; i++){
-            sum += args[i];
+        for (int i = 0; i< a.length; i++){
+            sum += Math.pow(a[i],3);
         }
         return sum;
     }
     public static boolean abcmath(int a, int b, int c){
-        for(int i = 1;i <= b; i++ ){
-            a+=a;
-        }
-        return a % c == 0;
+
+        return (a *(Math.pow(2, b)))%c == 0;
     }
 }
